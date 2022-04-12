@@ -17,11 +17,13 @@ import {FaBars} from 'react-icons/fa';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { fa } from '@fortawesome/free-solid-svg-icons'
 import { FaNpm } from "react-icons/fa";
 
-const pages = ['Home', 'Docs', 'Demo', 'Team'];
 
-const Navbar = () => {
+const pages = ['Home', 'Docs', 'Demo'];
+
+const Navbar = (props) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -41,8 +43,7 @@ const Navbar = () => {
   };
 
   return (
-
-    <AppBar style={{ position: 'static', background: '#fefaf6', boxShadow: 'none'}} position="static">
+    <AppBar style={{ position: 'fixed', background: '#fefaf6', boxShadow: 'none', zIndex: '2'}} position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
 
@@ -78,7 +79,7 @@ const Navbar = () => {
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">
-                    <Link style={{textDecoration: "none", color: "black"}} to={`/${page}`}>
+                    <Link onClick={props.demoAuthor} style={{textDecoration: "none", color: "black"}} to={`/${page}`}>
                       {page}
                     </Link>
                   </Typography>
@@ -87,29 +88,49 @@ const Navbar = () => {
             </Menu>
           </Box>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }}}>
+          {/* <Box id='leftNav' sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }}}>
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
+                style={{fontSize: '1rem', fontFamily: 'Montserrat'}}
               >
-                <Link style={{textDecoration: "none", color: "black"}} to={`/${page}`}>
+                <Link className='navLinks' style={{textDecoration: "none", color: "black"}} to={`/${page}`}>
+                  {page}
+                </Link>
+              </Button>
+            ))}
+          </Box> */}
+
+          <Box id='leftNav' sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }}}>
+            {pages.map((page) => (
+              <Button
+                key={page}
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+                style={{fontSize: '1rem', fontFamily: 'Montserrat'}}
+              >
+                <Link className='navLinks' onClick={props.demoAuthor} style={{textDecoration: "none", color: "black"}} to={`/${page}`}>
                   {page}
                 </Link>
               </Button>
             ))}
           </Box>
 
-          <Box sx={{ flexGrow: 1.5, display: { xs: 'none', md: 'flex' }}}>
+
+          <Box id='navLogo' sx={{ flexGrow: 1.5, display: { xs: 'none', md: 'flex' }}}>
             <Avatar alt="Remy Sharp" src={logo} style={{width: '125px'}} />
           </Box>
 
-          <Box display={'flex'} style={{alignItems: 'center', gap: '10px'}}> 
-            <TwitterIcon style={{color: 'black'}}/>
+          <Box id='rightNav'>
+            <a href='https://twitter.com/StashQL'>
+              <TwitterIcon onClick={props.demoAuthor} style={{color: 'black'}}/>
+            </a>
             <LinkedInIcon style={{color: 'black'}}/>
-            <FaNpm style={{color: '#CC3534', fontSize: '35px'}}/>
-            {/* <FontAwesomeIcon style={{color: 'black'}} icon={fanpm}></FontAwesomeIcon> */}
+            <a href='https://www.npmjs.com/package/stashql'>
+              <FaNpm onClick={props.demoAuthor} style={{color: '#CC3534', fontSize: '35px'}}/>
+            </a>
           </Box>
 
         </Toolbar>
