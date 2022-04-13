@@ -157,9 +157,9 @@ const Demo = (props) => {
   };
 
   const submitMutation = async () => {
-    let method = 'PUT';
+    // let method = 'PUT';
     await fetch('/api/graphql', {
-      method,
+      // method,
       body: JSON.stringify({query}),
       headers: { 'Content-Type': 'application/json' },
     })
