@@ -139,36 +139,36 @@ const Demo = (props) => {
   //     .catch((err) => console.log('Error: ', err));
   // };
 
-  // const submitQuery = async () => {
-  //   let method = 'POST';
-  //   await fetch('/api/graphql', {
-  //     method,
-  //     body: JSON.stringify({query}),
-  //     headers: { 'Content-Type': 'application/json' },
-  //   })
-  //     .then((res) => res.json())
-  //     .then(({ data, runTime }) => {
-  //       setReturnedData(JSON.stringify(data, null, 2));
-  //       setRunTime(oldRunTimes => [...oldRunTimes, runTime]);
-  //       addQueries(oldQueries => [...oldQueries, `Query ${oldQueries.length + 1}`]);
-  //       addSpeeds(oldSpeeds => [...oldSpeeds, runTime]);
-  //     })
-  //     .catch((err) => console.log('Error: ', err));
-  // };
+  const submitQuery = async () => {
+    let method = 'POST';
+    await fetch('/api/graphql', {
+      method,
+      body: JSON.stringify({query}),
+      headers: { 'Content-Type': 'application/json' },
+    })
+      .then((res) => res.json())
+      .then(({ data, runTime }) => {
+        setReturnedData(JSON.stringify(data, null, 2));
+        setRunTime(oldRunTimes => [...oldRunTimes, runTime]);
+        addQueries(oldQueries => [...oldQueries, `Query ${oldQueries.length + 1}`]);
+        addSpeeds(oldSpeeds => [...oldSpeeds, runTime]);
+      })
+      .catch((err) => console.log('Error: ', err));
+  };
 
-  // const submitMutation = async () => {
-  //   let method = 'POST';
-  //   await fetch('/api/graphql', {
-  //     method,
-  //     body: JSON.stringify({query}),
-  //     headers: { 'Content-Type': 'application/json' },
-  //   })
-  //     .then((res) => res.json())
-  //     .then(({ data }) => {
-  //       setReturnedData(JSON.stringify(data, null, 2));
-  //     })
-  //     .catch((err) => console.log('Error: ', err));
-  // };
+  const submitMutation = async () => {
+    let method = 'POST';
+    await fetch('/api/graphql', {
+      method,
+      body: JSON.stringify({query}),
+      headers: { 'Content-Type': 'application/json' },
+    })
+      .then((res) => res.json())
+      .then(({ data }) => {
+        setReturnedData(JSON.stringify(data, null, 2));
+      })
+      .catch((err) => console.log('Error: ', err));
+  };
 
   const clearCache = async () => {
     let method = 'POST';
