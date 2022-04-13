@@ -108,7 +108,7 @@
 // export default TeamBox;
 
 import React, { Component } from 'react';
-import simon from '../images/team/SimonCHen.jpg';
+import simon from '../images/team/SimonChen.jpg';
 import haku from '../images/team/HakudoUeno.png';
 import ian from '../images/team/IanMadden.jpg';
 import louie from '../images/team/LouieMendez.jpg';
