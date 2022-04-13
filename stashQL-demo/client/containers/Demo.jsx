@@ -298,7 +298,7 @@ const Demo = (props) => {
                   //   }
                   // },
                   min: 0,
-                  max: 350,
+                  max: 500,
                   ticks: {
                     color: '#868792',
                     font: {
