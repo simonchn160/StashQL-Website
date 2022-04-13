@@ -73,7 +73,7 @@ const Demo = (props) => {
   }
 
   const submitQuery = async () => {
-    let method = 'POST';
+    let method = 'PUT';
     await fetch('/api/graphql', {
       method,
       body: JSON.stringify({query}),
