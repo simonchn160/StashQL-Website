@@ -2,7 +2,7 @@ const { Pool } = require("pg");
 require('dotenv').config();
 
 const pool = new Pool({
-  connectionString: process.env.SUBSCRIBE_URI
+  connectionString: "postgres://ieywzzsr:ZmQLNaO6jeKwON_LhS0sfl649xLDKzkP@ruby.db.elephantsql.com/ieywzzsr"
 });
 
 module.exports = {
