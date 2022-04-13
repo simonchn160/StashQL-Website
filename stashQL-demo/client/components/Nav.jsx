@@ -79,9 +79,10 @@ const Navbar = (props) => {
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">
-                    <Link onClick={props.demoAuthor} style={{textDecoration: "none", color: "black"}} to={`/${page}`}>
+                    {/* <Link onClick={props.demoAuthor} style={{textDecoration: "none", color: "black"}} to={`/${page}`}>
                       {page}
-                    </Link>
+                    </Link> */}
+                    {page === 'Demo' ? <Link className='navLinks' style={{textDecoration: "none", color: "black"}} to={`/${page}`}>{page}</Link> : <Link className='navLinks' onClick={props.demoAuthor} style={{textDecoration: "none", color: "black"}} to={`/${page}`}>{page}</Link>}
                   </Typography>
                 </MenuItem>
               ))}
@@ -103,7 +104,7 @@ const Navbar = (props) => {
             ))}
           </Box> */}
 
-          <Box id='leftNav' sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }}}>
+          {/* <Box id='leftNav' sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }}}>
             {pages.map((page) => (
               <Button
                 key={page}
@@ -114,6 +115,22 @@ const Navbar = (props) => {
                 <Link className='navLinks' onClick={props.demoAuthor} style={{textDecoration: "none", color: "black"}} to={`/${page}`}>
                   {page}
                 </Link>
+              </Button>
+            ))}
+          </Box> */}
+
+          <Box id='leftNav' sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }}}>
+            {pages.map((page) => (
+              <Button
+                key={page}
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+                style={{fontSize: '1rem', fontFamily: 'Montserrat'}}
+              >
+                {/* <Link className='navLinks' onClick={props.demoAuthor} style={{textDecoration: "none", color: "black"}} to={`/${page}`}>
+                  {page}
+                </Link> */}
+                {page === 'Demo' ? <Link className='navLinks' style={{textDecoration: "none", color: "black"}} to={`/${page}`}>{page}</Link> : <Link className='navLinks' onClick={props.demoAuthor} style={{textDecoration: "none", color: "black"}} to={`/${page}`}>{page}</Link>}
               </Button>
             ))}
           </Box>

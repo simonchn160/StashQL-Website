@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import filler from '../../images/shepherd.png';
 import electricity from '../../images/electricity.png';
 import coding from '../../images/coding.png';
-import vid from '../../images/caching-3.mp4';
+import vid from '../../images/caching2.mp4';
 // import vid from '../../images/caching-2.mp4';
 
 
@@ -15,8 +15,8 @@ const SectionFour = () => {
       <div id='section-four'>
         <div id="section-four-text">
           <div>
-            <h1>Use the StashQL CLI</h1>
-            <h3>The StashQL package comes with a built-in command-line interface that you can use to check your query logs</h3>
+            <h1>Update Cached Data</h1>
+            <h3>StashQL has built-in methods to handle mutations that occur in your database, so you won't have to worry about stale data.</h3>
           </div>
         </div>
         <div id="section-four-img">  

@@ -23,7 +23,7 @@ class Footer extends React.Component {
           <div id='footer-left-side'>
             <div id='left-parent'>
               <div className='mailIcon'>
-                <a href='mailto:simonchn160@gmail.com'><FaMailBulk style={{color: '#fff', fontSize: '35px'}}/></a>
+                <a href='mailto:stashql.npm@gmail.com'><FaMailBulk style={{color: '#fff', fontSize: '35px'}}/></a>
               </div>
               <div className='inline-block-child'>
                 <h2 className="contact-us-text">CONTACT US</h2>
@@ -62,7 +62,7 @@ class Footer extends React.Component {
                 <Link className='footer-link' style={{textDecoration: "none"}} to={`/Docs`}>Documentation</Link>
               </div>
               <div className='right-right-child'>
-                <a className='footer-link' href='mailto:simonchn160@gmail.com'>Contact</a>
+                <a className='footer-link' href='mailto:stashql.npm@gmail.com'>Contact</a>
                 <a className='footer-link' href='mailto:simonchn160@gmail.com'>Featured</a>
                 <a className='footer-link' href='mailto:simonchn160@gmail.com'>Product Hunt</a>
               </div>

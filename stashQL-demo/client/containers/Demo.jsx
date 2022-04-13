@@ -34,8 +34,8 @@ const Demo = (props) => {
     labels: [],
     datasets: [{
       data: [],
-      backgroundColor: ["#9A51F7"],
-      borderColor: "#9A51F7",
+      backgroundColor: ["#FC5CAC"],
+      borderColor: "#FC5CAC",
       borderWidth: 3,
     }]
   });
@@ -46,8 +46,8 @@ const Demo = (props) => {
       datasets: [{
         color: 'red',
         data: speeds,
-        backgroundColor: ["#9A51F7"],
-        borderColor: "#9A51F7",
+        backgroundColor: ["#FC5CAC"],
+        borderColor: "#FC5CAC",
         borderWidth: 3,
       }]
     })
@@ -60,23 +60,64 @@ const Demo = (props) => {
   //   }
   // }, []);
 
+  // useEffect(() => {
+  //   window.onunload = async function() {
+  //     var result = demoAuthor();
+  //     return result;
+  //   }
+  // }, []);
+
+  // const demoAuthor = async () => {
+  //   // e.preventDefault(e);
+  //   clearCache();
+  //   let method = 'DELETE';
+  //   await fetch('/api/demoAuthor', {
+  //     method,
+  //     headers: { 'Content-Type': 'application/json' }
+  //   })
+  //     .then((res) => res.json())
+  //     .then((data) => console.log(data))
+  //     .catch((err) => console.log('Errpr in deleting: ', err));
+  //   return demoAuthor;
+  // }
+
+  // useEffect(() => {
+  //   window.onunload = window.onbeforeunload = async function() {
+  //     var result = demoAuthor();
+  //     return result;
+  //   }
+  // }, []);
+
+  // const demoAuthor = async () => {
+  //   // e.preventDefault(e);
+  //   clearCache();
+  //   let method = 'DELETE';
+  //   await fetch('/api/demoAuthor', {
+  //     method,
+  //     headers: { 'Content-Type': 'application/json' }
+  //   })
+  //     .then((res) => res.json())
+  //     .then((data) => console.log(data))
+  //     .catch((err) => console.log('Errpr in deleting: ', err));
+  //   return demoAuthor;
+  // }
+
+
   useEffect(() => {
-    window.onunload = async function() {
+    window.onbeforeunload = function() {
+      // e.preventDefault();
       var result = demoAuthor();
-      return result;
+      return;
     }
   }, []);
 
   const demoAuthor = async () => {
-    // e.preventDefault(e);
     clearCache();
     let method = 'DELETE';
     await fetch('/api/demoAuthor', {
       method,
       headers: { 'Content-Type': 'application/json' }
     })
-      .then((res) => res.json())
-      .then((data) => console.log(data))
       .catch((err) => console.log('Errpr in deleting: ', err));
     return demoAuthor;
   }
@@ -113,13 +154,11 @@ const Demo = (props) => {
   };
 
   const clearCache = async () => {
-    console.log('clearing cache...');
     let method = 'POST';
     await fetch('/api/clearCache', {
       method,
       headers: { 'Content-Type': 'application/json' },
     })
-      .then(console.log('cleared!'))
       .catch((err) => console.log('Error: ', err));
   }
 

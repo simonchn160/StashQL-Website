@@ -11,7 +11,7 @@ const Installation = (props) => {
           <p>StashQL can be installed as a dependency</p>
           <div id="doc-code-block-1">
             <div>
-            <span style={{color:"#ffc91e"}} >npm </span><span style={{color:"fff"}} >install</span> <span style={{color: "#a3a3ff"}}>stashql</span>
+            <span style={{color:"rgb(250, 200, 99)"}} >npm </span><span style={{color:"rgb(197, 165, 197)"}} >install</span> <span style={{color: "#a3a3ff"}}>stashql</span>
             </div>
             <FaCopy id='copyBtn' onClick={() => {props.setCopiedTrue(); navigator.clipboard.writeText('npm install stashql')}} />
           </div>
@@ -21,3 +21,9 @@ const Installation = (props) => {
 };
 
 export default Installation;
+
+// rgb(197, 165, 197);
+// rgb(141, 200, 145);
+// rgb(121, 182, 242);
+// rgb(252, 146, 158);
+// rgb(250, 200, 99);

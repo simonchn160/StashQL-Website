@@ -7,6 +7,7 @@ const schema = require("./schema");
 const subscribeController = require("./controllers/subscribeController");
 const demoController = require("./controllers/demoController");
 
+
 const app = express();
 
 const redisCache = redis.createClient();
@@ -67,7 +68,7 @@ app.use("*", (req, res) => {
 });
 
 app.use((err, req, res, next) => {
-  console.log(err);
+  console.log('Error: ', err);
   res.status(500).send("Internal Server Error");
 });
 

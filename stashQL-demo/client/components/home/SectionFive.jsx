@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import vid from '../../images/caching-3.mp4';
+import vid from '../../images/caching3.mp4';
 
 // import filler from '../../../public/images/shepherd.png';
 // import feathers from '../../../public/images/feathers.png';
@@ -18,8 +18,8 @@ const SectionFive = () => {
         </div>
         <div id="section-five-text">
           <div>
-            <h1>Light As A Feather</h1>
-            <h3>We created StashQL to be a light-weight NPM package so that your application can run as smoothly as possible</h3>
+          <h1>Use the StashQL CLI</h1>
+            <h3>The StashQL package comes with a built-in command-line interface that you can use to check your query logs</h3>
           </div>
         </div>
       </div>

@@ -4,7 +4,8 @@ import electricity from '../../images/electricity.png'
 import coding from '../../images/coding.png';
 // import vid from '../../images/caching.mp4';
 // import vid from '../../images/caching-1.mp4';
-import vid from '../../images/caching-3.mp4';
+// import vid from '../../images/caching-3.mp4';
+import vid from '../../images/caching1.mp4';
 
 // import filler from '../../../public/images/shepherd.png';
 // import electricity from '../../../public/images/electricity.png'

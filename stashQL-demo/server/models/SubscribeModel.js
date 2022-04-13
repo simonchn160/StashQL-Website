@@ -1,11 +1,8 @@
 const { Pool } = require("pg");
-
-// v-- REPLACE THE EMPTY STRING WITH YOUR LOCAL/MLAB/ELEPHANTSQL URI
-const myURI =
-  "postgres://ieywzzsr:ZmQLNaO6jeKwON_LhS0sfl649xLDKzkP@ruby.db.elephantsql.com/ieywzzsr";
+require('dotenv').config();
 
 const pool = new Pool({
-  connectionString: myURI,
+  connectionString: process.env.SUBSCRIBE_URI
 });
 
 module.exports = {

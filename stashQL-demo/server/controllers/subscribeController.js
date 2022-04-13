@@ -4,8 +4,6 @@ module.exports = {
   subscribe: async (req, res, next) => {
     const { email } = req.body;
 
-    console.log("the email: ", email);
-
     const sqlQuery = "INSERT INTO Email (name) VALUES ($1) RETURNING *;";
     const params = [email];
 

@@ -38,7 +38,6 @@ class Home extends React.Component {
 
   subscribe() {
     const email = this.state.email;
-    console.log('LOOK HERE ', this.state.email);
     let method = 'POST';
     fetch('/api/subscribe', {
       method,
@@ -48,12 +47,9 @@ class Home extends React.Component {
       .then(data => data.json())
       .then(data => {
         if (data === true) this.setState({email: '', displayText: true})
-        else {
-          console.log('nah boi')
-        }
       }
       )
-      .catch(err => console.log(err));
+      .catch(err => console.log('Error: ', err));
   }
 
   render() {

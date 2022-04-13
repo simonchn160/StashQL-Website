@@ -15,35 +15,42 @@ const TextArea3 = () => {
     //   />
     // </div>
 
+    // yellow rgb(197, 165, 197);
+    // green rgb(141, 200, 145);
+    // blue rgb(121, 182, 242);
+    // red rgb(252, 146, 158);
+    // orange rgb(250, 200, 99);
+
+    // purple #a3a3ff
+
     <div id="doc-code-block-3">
       <div>
-        <span style={{color:"#ce70cc"}}>app.</span>
-        <span style={{color:"#ffc91e"}}>use</span>
-        <span style={{color:"#56b6c2"}}>(</span>
+        <span style={{color:"rgb(252, 146, 158)"}}>app.</span>
+        <span style={{color:"rgb(197, 165, 197)"}}>use</span>
+        <span style={{color:"rgb(141, 200, 145)"}}>(</span>
         <span style={{color:"#fff"}}>"</span>
         <span style={{color:"#a3a3ff"}}>/graphql</span>
         <span style={{color:"#fff"}}>", </span>
-        <span style={{color:"#51f793"}}>StashQL</span>
-        <span style={{color:"#36a8ff"}}>.queryHandler, </span>
-        <span style={{color:"#f536ff"}}>(</span>
-        <span style={{color:"#7d9af8"}}>req, res</span>
-        <span style={{color:"#f536ff"}}>) </span>
-        <span style={{color:"#f8b47d"}}>=> </span>
-        <span style={{color:"#ff6161"}}>&#123;</span> 
+        <span style={{color:"#a3a3ff"}}>StashQL</span>
+        <span style={{color:"rgb(121, 182, 242)"}}>.queryHandler, </span>
+        <span style={{color:"rgb(141, 200, 145)"}}>(</span>
+        <span style={{color:"#fff"}}>req, res</span>
+        <span style={{color:"rgb(141, 200, 145)"}}>) </span>
+        <span style={{color:"rgb(141, 200, 145)"}}>=> </span>
+        <span style={{color:"rgb(141, 200, 145)"}}>&#123;</span> 
         <br/>
-        <span style={{color:"#ce70cc", marginLeft: '20px'}}>return </span> 
-        <span style={{color:"#7d9af8"}}>res.status</span> 
-        <span style={{color:"#51f793"}}>(</span> 
-        <span style={{color:"#a3a3ff"}}>200</span> 
-        <span style={{color:"#51f793"}}>)</span> 
-        <span style={{color:"#ffc91e"}}>.json</span> 
-        <span style={{color:"#f536ff"}}>(</span> 
-        <span style={{color:"#36a8ff"}}>res.locals.data</span> 
-        <span style={{color:"#f536ff"}}>)</span> 
+        <span style={{color:"rgb(252, 146, 158)", marginLeft: '20px'}}>return </span> 
+        <span style={{color:"#fff"}}>res.status</span> 
+        <span style={{color:"rgb(141, 200, 145)"}}>(</span> 
+        <span style={{color:"#fff"}}>200</span> 
+        <span style={{color:"rgb(141, 200, 145)"}}>)</span> 
+        <span style={{color:"rgb(121, 182, 242)"}}>.json</span> 
+        <span style={{color:"rgb(141, 200, 145)"}}>(</span> 
+        <span style={{color:"#fff"}}>res.locals.data</span> 
+        <span style={{color:"rgb(141, 200, 145)"}}>)</span> 
         <br />
-        <span style={{color:"#ff6161"}}>&#125;</span> 
-        <span style={{color:"#56b6c2"}}>)</span> 
-        <span style={{color:"fff"}}>;</span> 
+        <span style={{color:"rgb(141, 200, 145)"}}>&#125;</span> 
+        <span style={{color:"#56b6c2"}}>);</span> 
       </div>
         
     </div>
